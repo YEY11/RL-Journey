@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time : 2023/2/5 23:02
+# @Time : 2023/2/5
 # @Author : YEY
 # @File : naive_holdem.py
 
