@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import random
 from utils.my_decorators import dividing_line
 from utils.my_decorators import plt_support_cn
+from utils.my_path_utils import get_out_file_path
 
 
 @unique
@@ -322,7 +323,9 @@ class Task:
         plt.bar(patterns, probs)
         for pattern, prob in zip(patterns, probs):
             plt.text(pattern, prob, prob, ha='center', va='bottom')
-        plt.savefig(fig_name, dpi=600)
+
+        out_file_path = get_out_file_path(fig_name + '.png')
+        plt.savefig(out_file_path, dpi=600)
         plt.show()
 
         return pattern_probs_dict
