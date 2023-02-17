@@ -165,8 +165,7 @@ class Task:
 if __name__ == '__main__':
     ENV = gym.make('Blackjack-v1', natural=False, sab=False, render_mode='rgb_array')
     EPISODE = 500000
-    GAMMA = 0.9
-    BLACKJACK_GAME = BlackJackGame(env=ENV, episode=EPISODE, gamma=GAMMA)
+    BLACKJACK_GAME = BlackJackGame(env=ENV, episode=EPISODE)
 
     Task.monte_carlo_simulation_test(game=BLACKJACK_GAME)
     Task.analyse_simulation_result(game=BLACKJACK_GAME)
